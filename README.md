@@ -57,6 +57,34 @@ docker run -d `
 
 ---
 
+## Conventional Commits Guideline
+
+We are using the [Commit message guidelines.](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit) extended with our Jira Ticket.
+
+### Commit Message
+
+```text
+<type>: <short summary>
+  │          │
+  │          │
+  │          │
+  │          └─⫸ Summary in present tense. Not capitalized. No period at the end.
+  │
+  └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test|chore
+```
+
+The `<type>` and `<short summary>` fields are mandatory.
+We don't use a scope here, because each package has its own CHANGELOG document.
+
+Further details can be given on additional lines.
+
+For example:
+
+- `docs: adjusted the readme`
+- `feat: added new powershell script XYZ.ps1`
+
+---
+
 ## Next Steps
 
 - Access Jenkins and complete the initial setup wizard
