@@ -15,7 +15,6 @@
 > - Running Jenkins locally on Docker Desktop (no external infrastructure required)
 
 > The repository is organized for workshops, featuring sequence diagrams, git graph diagrams, and step-by-step Jenkinsfile examples so teams can learn by doing.
-
 ---
 
 ## Prerequisites
