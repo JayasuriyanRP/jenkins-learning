@@ -11,19 +11,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                sh 'echo Build step (replace with actual build command)'
+                bat 'echo Build step (replace with actual build command)'
             }
         }
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'echo Test step (replace with actual test command)'
+                bat 'echo Test step (replace with actual test command)'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying application...'
-                sh 'echo Deploy step (replace with actual deploy command)'
+                bat 'echo Deploy step (replace with actual deploy command)'
             }
         }
         stage('PowerShell Script') {
