@@ -2,9 +2,8 @@ pipeline {
     agent any // Linux agent (WSL2)
 
     tools {
-        nodejs 'NodeLTS' // Matches the name in Global Tool Configuration
+        nodejs 'NodeJS' // Matches the name in Global Tool Configuration
     }
-
     stages {
         stage('Checkout') {
             steps {
@@ -12,10 +11,18 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Verify') {
+        stage('Install Node.js') {
             steps {
-                bat 'node -v'
-                bat 'npm -v'
+                echo 'Installing Node.js on Linux agent...'
+                sh '''
+                    if ! command -v node >/dev/null 2>&1; then
+                        curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+                        sudo apt-get install -y nodejs
+                    fi
+
+                    node --version
+                    npm --version
+                '''
             }
         }
         stage('Build') {
