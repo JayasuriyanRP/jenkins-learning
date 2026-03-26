@@ -1,4 +1,3 @@
-import React from "react";
 
 const CubiclesOverview = () => (
   <div className="bg-white rounded shadow p-6">

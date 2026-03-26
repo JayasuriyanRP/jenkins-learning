@@ -1,5 +1,3 @@
-import React from "react";
-
 const WelcomeSection = () => (
   <section className="mb-8">
     <h2 className="text-xl font-semibold mb-4">Welcome to Asset Management</h2>
